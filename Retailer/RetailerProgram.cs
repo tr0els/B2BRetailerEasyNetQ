@@ -19,7 +19,7 @@ namespace Retailer
 
         static void Main(string[] args)
         {
-            using (bus = RabbitHutch.CreateBus("host=localhost;persistentMessages=false"))
+            using (bus = RabbitHutch.CreateBus("host=rattlesnake.rmq.cloudamqp.com;virtualHost=pfyoxdnf;username=pfyoxdnf;password=Sh-G_0bSs87gBcJ54vJMva1IWeWdQ6pQ;persistentMessages=false"))
             {
                 Console.WriteLine("Retailer is running.");
 

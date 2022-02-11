@@ -22,7 +22,7 @@ namespace Warehouse
 
         public void Start()
         {
-            using (bus = RabbitHutch.CreateBus("host=localhost;persistentMessages=false"))
+            using (bus = RabbitHutch.CreateBus("host=rattlesnake.rmq.cloudamqp.com;virtualHost=pfyoxdnf;username=pfyoxdnf;password=Sh-G_0bSs87gBcJ54vJMva1IWeWdQ6pQ;persistentMessages=false"))
             {
                 // Listen for order request messages.
                 bus.PubSub.Subscribe<OrderRequestMessage>("warehouse" + id.ToString(), 

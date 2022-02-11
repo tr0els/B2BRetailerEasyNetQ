@@ -33,7 +33,7 @@ namespace Customer
                 Country = country
             };
 
-            using (IBus bus = RabbitHutch.CreateBus("host=localhost;persistentMessages=false"))
+            using (IBus bus = RabbitHutch.CreateBus("host=rattlesnake.rmq.cloudamqp.com;virtualHost=pfyoxdnf;username=pfyoxdnf;password=Sh-G_0bSs87gBcJ54vJMva1IWeWdQ6pQ;persistentMessages=false"))
             {
                 // Listen to reply messages from the Retailer (use Topic Based Routing).
                 // WRITE CODE HERE!
